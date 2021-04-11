@@ -107,4 +107,6 @@ return [
         ],
     ],
 
+    'btc_change_notification_email' => env('BTC_NOTIFY_EMAIL'),
+
 ];

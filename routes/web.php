@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('products');
+});
+
+Route::group(['prefix' => 'products', 'as' => 'products.'], function () {
+    Route::get('/', ['as' => 'show', 'uses' => 'ProductController@index']);
 });
